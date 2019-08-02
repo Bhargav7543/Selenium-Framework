@@ -23,7 +23,7 @@ public class TC_Registration_01 extends BaseTest {
 	@BeforeMethod
 	public void beforeMethod() {
 		ReportsClass.startUp();
-		ReportsClass.initialisation("Registration_Demo");
+		ReportsClass.initialisation("TC_Registration_01");
 		openBrowser(url);
 	}
 
