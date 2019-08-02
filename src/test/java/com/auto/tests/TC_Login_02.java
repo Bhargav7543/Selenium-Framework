@@ -27,7 +27,7 @@ public class TC_Login_02 extends BaseTest {
 	@BeforeMethod
 	public void beforeMethod() {
 		ReportsClass.startUp();
-		ReportsClass.startTest("TC_Login_02");
+		ReportsClass.initialisation("TC_Login_02");
 		openBrowser(url);
 	}
 
