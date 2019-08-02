@@ -6,6 +6,8 @@ import org.testng.annotations.Test;
 import com.auto.baseClass.BaseTest;
 import com.auto.pageObject.RegistrationPage;
 import com.auto.utility.ReadPropertyConfig;
+import com.auto.utility.ReportsClass;
+import com.aventstack.extentreports.Status;
 /**
  * 
  * * Author : Bhargav Sathwara ***
@@ -20,6 +22,8 @@ public class TC_Registration_01 extends BaseTest {
 
 	@BeforeMethod
 	public void beforeMethod() {
+		ReportsClass.startUp();
+		ReportsClass.initialisation("Registration_Demo");
 		openBrowser(url);
 	}
 
@@ -28,6 +32,7 @@ public class TC_Registration_01 extends BaseTest {
 		RegistrationPage pageReg = new RegistrationPage();
 		pageReg.clickOnMyAccountMenu();
 		pageReg.registerShop(email, password);
+		ReportsClass.logStat(Status.PASS, "User registration successfully");
 	}
 
 }
