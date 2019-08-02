@@ -92,4 +92,10 @@ public class ReadPropertyConfig {
 		String ieDriver = configProperty.getProperty("IE_DRIVER");
 		return ieDriver;
 	}
+	
+	//Extent Report get Property
+	public String getExtentReportPath(){
+		String extentReport = configProperty.getProperty("EXTENT_REPORT_PATH");
+		return extentReport;
+	}
 }
