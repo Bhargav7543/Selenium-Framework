@@ -37,7 +37,7 @@ public class TC_Login_02 extends BaseTest {
 		LoginPage loginPage = new LoginPage();
 		regPage.clickOnMyAccountMenu();
 		loginPage.login(uname, pwd);
-		ReportsClass.logStat(Status.PASS, "User is ablw to login successfully");
+		ReportsClass.logStat(Status.PASS, "User is able to login successfully");
 		Assert.assertTrue(loginPage.isLoginSuccess(), "Login is not success as expected !!!");
 
 	}
