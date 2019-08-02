@@ -1,5 +1,6 @@
 package com.auto.tests;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -8,12 +9,13 @@ import com.auto.pageObject.RegistrationPage;
 import com.auto.utility.ReadPropertyConfig;
 import com.auto.utility.ReportsClass;
 import com.aventstack.extentreports.Status;
+
 /**
  * 
  * * Author : Bhargav Sathwara ***
  * 
- * */
-public class Registration_Demo extends BaseTest{
+ */
+public class Registration_Demo extends BaseTest {
 	ReadPropertyConfig readPro = new ReadPropertyConfig();
 	String firstname = readPro.getFirstName();
 	String lastname = readPro.getLastName();
@@ -24,7 +26,7 @@ public class Registration_Demo extends BaseTest{
 	String cPassword = readPro.getConfirmPassword();
 	String url = readPro.getBaseUrl();
 
-	@BeforeMethod 
+	@BeforeMethod
 	public void beforeMethod() {
 		ReportsClass.startUp();
 		ReportsClass.initialisation("Registration_Demo");
@@ -37,5 +39,10 @@ public class Registration_Demo extends BaseTest{
 		regPage.register(firstname, lastname, adress, emailAddress, phoneNumber, password, cPassword);
 		ReportsClass.logStat(Status.PASS, "User registration successfully");
 	}
-	
+
+	@AfterMethod
+	public void afterMethod() {
+		ReportsClass.endTest();
+	}
+
 }

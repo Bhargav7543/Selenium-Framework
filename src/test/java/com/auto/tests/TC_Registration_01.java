@@ -1,5 +1,6 @@
 package com.auto.tests;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -8,11 +9,12 @@ import com.auto.pageObject.RegistrationPage;
 import com.auto.utility.ReadPropertyConfig;
 import com.auto.utility.ReportsClass;
 import com.aventstack.extentreports.Status;
+
 /**
  * 
  * * Author : Bhargav Sathwara ***
  * 
- * */
+ */
 public class TC_Registration_01 extends BaseTest {
 
 	ReadPropertyConfig readProp = new ReadPropertyConfig();
@@ -33,6 +35,11 @@ public class TC_Registration_01 extends BaseTest {
 		pageReg.clickOnMyAccountMenu();
 		pageReg.registerShop(email, password);
 		ReportsClass.logStat(Status.PASS, "User registration successfully");
+	}
+
+	@AfterMethod
+	public void afterMethod() {
+		ReportsClass.endTest();
 	}
 
 }

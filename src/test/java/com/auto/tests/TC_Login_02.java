@@ -1,6 +1,7 @@
 package com.auto.tests;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -42,8 +43,8 @@ public class TC_Login_02 extends BaseTest {
 
 	}
 
-	@AfterTest
-	public void endTest1() {
+	@AfterMethod
+	public void afterMethod() {
 		ReportsClass.endTest();
 	}
 }
