@@ -21,7 +21,7 @@ public class ReportsClass {
 		reportStartUp();
 	}
 
-	public static void startTest(String testName) {
+	public static void initialisation(String testName) {
 		test = extent.createTest(testName);
 	}
 
