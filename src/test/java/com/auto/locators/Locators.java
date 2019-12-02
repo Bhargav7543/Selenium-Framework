@@ -1,9 +1,10 @@
 package com.auto.locators;
+
 /**
  * 
  * * Author : Bhargav Sathwara ***
  * 
- * */
+ */
 public interface Locators {
 
 	public interface registrationLocators {
@@ -28,5 +29,22 @@ public interface Locators {
 		String LOGIN_PASSWORD = "//*[@id='password']";
 		String LOGIN_BUTTON = "//*[@name='login']";
 		String LOGIN_SUCCESS = "//*[@id='page-36']/div";
+	}
+
+	// Parabank Locators
+	public interface parabankRegister {
+		String REGISTER = "//*[@id='loginPanel']/p[2]/a";
+		String FIRSTNAME = "//*[@id='customer.firstName']";
+		String LASTNAME = "//*[@id='customer.lastName']";
+		String ADDRESS = "//*[@id='customer.address.street']";
+		String CITY = "//*[@id='customer.address.city']";
+		String STATE = "//*[@id='customer.address.state']";
+		String ZIPCODE = "//*[@id='customer.address.zipCode']";
+		String PHONENUMBER = "//*[@id='customer.phoneNumber']";
+		String SSN = "//*[@id='customer.ssn']";
+		String USERNAME = "//*[@id='customer.username']";
+		String PASSWORD = "//*[@id='customer.password']";
+		String CONFIRMPASSWORD = "//*[@id='repeatedPassword']";
+		String REGBUTTON = "//*[@id='customerForm']/table/tbody/tr[13]/td[2]/input";
 	}
 }
